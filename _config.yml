@@ -38,13 +38,11 @@ plugins:
 plainwhite:
           portfolio_image: "assets/portfolio.jpg"
           name: Lachlan Macartney
-          tagline: Developer. Designer
           date_format: "%b %-d, %Y"
 
           social_links:
-            twitter: samarsault
-            github: samarsault
-            linkedIn: in/samarsault # format: locale/username
+            github: lachstr
+            linkedIn: in/lmacartney # format: locale/username
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
