@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Bessel Function Animation"
-categories: misc
+categories: math physics
 ---
 
 Bessel’s differential equation is given by:

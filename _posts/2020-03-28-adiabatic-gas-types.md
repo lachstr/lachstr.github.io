@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Adiabatic Processes for Monatomic and Diatomic Gases"
-categories: misc
+categories: physics
 ---
 
 Here 'f' refers to the degrees of freedom of a gas. Monatomic gases have 3 degrees of freedom at room-temperature, whereas diatomic gases have 5. The first three degrees of freedom come from translational degrees of freedom along the x, y, z axes. Diatomic gasses exhibit two extra degrees of freedom because they undergo distinguishable rotations along the θ, ϕ axes. This results in some interesting phenomena conveyed in the following diagrams. These can be used to ask intriguing questions such as;

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Newton's Cradle Animation"
-categories: misc
+categories: physics
 ---
 The purpose of this project is to animate Newton's Cradle from first principles. Newton's Cradle has been animated before however typically via a key-frame method or one reliant on a complicated physics engine. In this post we will animate Newton's Cradle by implementing our own minimalist physics engine. We will use the following guiding statement to develop our simulator;
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Electric Fields"
-categories: misc
+categories: physics
 ---
 
 An electron remains trapped in a potential energy well. If it were to aquire slightly more kinetic energy the electron would travel to infinity.

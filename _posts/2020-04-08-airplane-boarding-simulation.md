@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Airplane Boarding Simulation Investigation"
-categories: misc
+categories: stats
 ---
 
 Here we will investigate a modified version of the well known 100 passenger plane boarding problem.

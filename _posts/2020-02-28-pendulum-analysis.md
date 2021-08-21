@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Pendulum Approximation Qualitative Analysis"
-categories: misc
+categories: physics
 ---
 
 Let's see how we can use matplotlib to model pendulum motion.
