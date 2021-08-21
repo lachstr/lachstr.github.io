@@ -2,7 +2,10 @@ title: lmac blog
 author: Lachlan Macartney
 email: lachymacartney@gmail.com
 description: > # this means to ignore newlines until "show_exerpts:"
-A blog collection of animations and graphs which I have created as part of my study of physical systems and mathematics. I hope that by sharing this content it becomes useful for others in some way. Should you have any questions or suggestions; feel free to contact me.
+        A blog collection of animations and graphs which I have created as part of my
+        study of physical systems and mathematics. I hope that by sharing this content
+        it becomes useful for others in some way. Should you have any questions or suggestions;
+        feel free to contact me.
 show_excerpts: true # set to true to show excerpts on the homepage
 
 # Minima date format
