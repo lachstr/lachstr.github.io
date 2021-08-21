@@ -14,7 +14,7 @@ sass:
   sass_dir: _sass
 plainwhite:
   name: Lachlan Macartney
-  date_format: "%b %-d, %Y"
+  date_format: "%b %Y"
   sitemap: true # set to true to generate sitemap.xml content
   search: false # set to true to enable searchbar
   dark_mode: false # set to true to add dark mode toggle
