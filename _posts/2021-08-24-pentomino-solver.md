@@ -5,7 +5,7 @@ categories: cs
 ---
 
 In this post we will explore pentomino puzzle solving. But first, what is a pentomino?
-A pentomino is a special case (n=5) of an n-omino with 5 equal sized squares connected edge-to-edge.
+A pentomino is a special case of an polyomino (think dom-ino) with 5 equal sized squares connected edge-to-edge.
 Without considering rotations or reflections, there are 12 distinct pentominos.
 
 [All 18 Pentominos](https://en.wikipedia.org/wiki/Pentomino#/media/File:All_18_Pentominoes.svg)
