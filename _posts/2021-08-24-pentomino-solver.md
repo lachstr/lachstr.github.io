@@ -53,8 +53,6 @@ public class GridNode {
     public String toString();
 }
 ```
-
-/*******/
 ```java
 private GridNode aSolution(GridNode firstNode){
 	/*Depth first search for a solution*/
