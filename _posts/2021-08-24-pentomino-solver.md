@@ -40,7 +40,7 @@ In this context, the graph nodes are the board layouts and the graph vertices ar
 
 Those famillar with depth first search may find the following method in the `Solver` class satisfying;
 
-```Java
+```java
 public class GridNode {
     public char[][] grid;
     private ArrayList<Character> avaliableTypes = new ArrayList<>();
@@ -53,6 +53,8 @@ public class GridNode {
 }
 
 /*******/
+```
+```java
 
  private GridNode aSolution(GridNode firstNode, boolean reusablePentominoes){
     	/*Depth first search for a solution*/
