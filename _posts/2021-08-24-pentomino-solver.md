@@ -8,7 +8,7 @@ In this post we will explore pentomino puzzle solving. But first, what is a pent
 A pentomino is a special case (n=5) of an n-omino with 5 equal sized squares connected edge-to-edge.
 Without considering rotations or reflections, there are 12 distinct pentominos.
 
-![All 18 Pentominos](https://en.wikipedia.org/wiki/Pentomino#/media/File:All_18_Pentominoes.svg)
+[All 18 Pentominos](https://en.wikipedia.org/wiki/Pentomino#/media/File:All_18_Pentominoes.svg)
 
 In this project we will attempt to fill a rectangular grid full of pentominos without any gaps.
 This is a harder problem than one might initially think. Anecdotetally, I have heard it might take
@@ -40,47 +40,7 @@ In this context, the graph nodes are the board layouts and the graph vertices ar
 
 Those famillar with depth first search may find the following method in the `Solver` class satisfying;
 
-```java
-private GridNode aSolution(GridNode firstNode){
-	/*Depth first search for a solution*/
-	GridNode node = firstNode;
-	Stack<GridNode> stack = new Stack<GridNode>();
-	HashSet<String> seen = new HashSet<>();
-
-	stack.add(node);
-
-	while (stack.size()>0){
-		node = stack.pop();
-
-		ArrayList<Pentomino> allPermutations = node.generateEdges();
-
-		if (node.getCoordinateToPlace() == null){
-			return node;
-		}
-
-		/*hash the board printout to avoid traversing explored nodes*/
-		if (seen.contains(node.toString())){
-			continue;
-		} else {
-			seen.add(node.toString());
-		}
-
-		for (Pentomino p : allPermutations){
-
-			if (p.canPlaceOn(node)){
-				GridNode newNode = node.copy();
-				p.placeOn(newNode);
-				newNode.removePentominoType(p.getType());
-				stack.push(newNode);
-			}
-		}
-
-	}
-	return null;
-}
-```
-/****/
-```java
+```Java
 public class GridNode {
     public char[][] grid;
     private ArrayList<Character> avaliableTypes = new ArrayList<>();
@@ -90,7 +50,50 @@ public class GridNode {
     public Coordinate getCoordinateToPlace();
     public GridNode copy();
     public ArrayList<Pentomino> generateEdges();
-    public String toString();
 }
+
+/*******/
+
+ private GridNode aSolution(GridNode firstNode, boolean reusablePentominoes){
+    	/*Depth first search for a solution*/
+		GridNode node = firstNode;
+		Stack<GridNode> stack = new Stack<GridNode>();
+		HashSet<String> seen = new HashSet<>();
+
+
+		stack.add(node);
+
+		while (stack.size()>0){
+			node = stack.pop();
+
+			ArrayList<Pentomino> allPermutations = node.generateEdges();
+
+			if (node.getCoordinateToPlace() == null){
+				return node;
+			}
+
+			for (Pentomino p : allPermutations){
+
+				if (p.canPlaceOn(node)){
+
+					GridNode newNode = node.copy();
+					p.placeOn(newNode);
+
+					if (!reusablePentominoes){
+						newNode.removePentominoType(p.getType());
+					}
+
+					stack.push(newNode);
+				}
+			}
+
+		}
+		return null;
+	}
 ```
 
+Those wanting to view the full code for the Java solver may do so [here](https://github.com/lachstr/pentominoSolver).
+
+The Java program outputs character arrays to represent the pentomino board.
+
+To generate the colourful animations above I used a few python packages, those interested in seeing how I did that can do so [here](https://github.com/lachstr/pentominoAnimator/blob/main/notebook.ipynb).
