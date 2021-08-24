@@ -8,7 +8,7 @@ In this post we will explore pentomino puzzle solving. But first, what is a pent
 A pentomino is a special case of an polyomino (think dom-ino) with 5 equal sized squares connected edge-to-edge.
 Without considering rotations or reflections, there are 12 distinct pentominos.
 
-[All 18 Pentominos](https://en.wikipedia.org/wiki/Pentomino#/media/File:All_18_Pentominoes.svg)
+[All 18 Pentominos (reflections included) ](https://en.wikipedia.org/wiki/Pentomino#/media/File:All_18_Pentominoes.svg)
 
 In this project we will attempt to fill a rectangular grid full of pentominos without any gaps.
 This is a harder problem than one might initially think. Anecdotetally, I have heard it might take
