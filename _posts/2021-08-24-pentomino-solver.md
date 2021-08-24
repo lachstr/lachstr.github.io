@@ -41,19 +41,6 @@ In this context, the graph nodes are the board layouts and the graph vertices ar
 Those famillar with depth first search may find the following method in the `Solver` class satisfying;
 
 ```java
-public class GridNode {
-    public char[][] grid;
-    private ArrayList<Character> avaliableTypes = new ArrayList<>();
-
-    public GridNode(char[][] grid, ArrayList<Character> avaliableTypes);
-    public ArrayList<Character> getPentominoTypes();
-    public Coordinate getCoordinateToPlace();
-    public GridNode copy();
-    public ArrayList<Pentomino> generateEdges();
-    public String toString();
-}
-```
-```java
 private GridNode aSolution(GridNode firstNode){
 	/*Depth first search for a solution*/
 	GridNode node = firstNode;
@@ -90,6 +77,20 @@ private GridNode aSolution(GridNode firstNode){
 
 	}
 	return null;
+}
+```
+/****/
+```java
+public class GridNode {
+    public char[][] grid;
+    private ArrayList<Character> avaliableTypes = new ArrayList<>();
+
+    public GridNode(char[][] grid, ArrayList<Character> avaliableTypes);
+    public ArrayList<Character> getPentominoTypes();
+    public Coordinate getCoordinateToPlace();
+    public GridNode copy();
+    public ArrayList<Pentomino> generateEdges();
+    public String toString();
 }
 ```
 
