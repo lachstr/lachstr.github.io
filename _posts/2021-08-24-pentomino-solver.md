@@ -51,9 +51,8 @@ public class GridNode {
     public GridNode copy();
     public ArrayList<Pentomino> generateEdges();
 }
-
-/*******/
 ```
+/*******/
 ```java
 
  private GridNode aSolution(GridNode firstNode, boolean reusablePentominoes){
