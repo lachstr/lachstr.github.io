@@ -52,45 +52,46 @@ public class GridNode {
     public ArrayList<Pentomino> generateEdges();
     public String toString();
 }
+```
 
 /*******/
+```java
+private GridNode aSolution(GridNode firstNode){
+	/*Depth first search for a solution*/
+	GridNode node = firstNode;
+	Stack<GridNode> stack = new Stack<GridNode>();
+	HashSet<String> seen = new HashSet<>();
 
- private GridNode aSolution(GridNode firstNode){
-    	/*Depth first search for a solution*/
-		GridNode node = firstNode;
-		Stack<GridNode> stack = new Stack<GridNode>();
-		HashSet<String> seen = new HashSet<>();
-		
-		stack.add(node);
-		
-		while (stack.size()>0){
-			node = stack.pop();
+	stack.add(node);
 
-			ArrayList<Pentomino> allPermutations = node.generateEdges();
+	while (stack.size()>0){
+		node = stack.pop();
 
-			if (node.getCoordinateToPlace() == null){
-				return node;
-			}
-			
-			/*hash the board printout to avoid traversing explored nodes*/
-			if (seen.contains(node.toString())){
-				continue;
-			} else {
-				seen.add(node.toString());
-			}
+		ArrayList<Pentomino> allPermutations = node.generateEdges();
 
-			for (Pentomino p : allPermutations){
-
-				if (p.canPlaceOn(node)){
-					GridNode newNode = node.copy();
-					p.placeOn(newNode);
-					newNode.removePentominoType(p.getType());
-					stack.push(newNode);
-				}
-			}
-
+		if (node.getCoordinateToPlace() == null){
+			return node;
 		}
-		return null;
+
+		/*hash the board printout to avoid traversing explored nodes*/
+		if (seen.contains(node.toString())){
+			continue;
+		} else {
+			seen.add(node.toString());
+		}
+
+		for (Pentomino p : allPermutations){
+
+			if (p.canPlaceOn(node)){
+				GridNode newNode = node.copy();
+				p.placeOn(newNode);
+				newNode.removePentominoType(p.getType());
+				stack.push(newNode);
+			}
+		}
+
 	}
+	return null;
+}
 ```
 
