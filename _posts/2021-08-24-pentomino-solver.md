@@ -50,19 +50,19 @@ public class GridNode {
     public Coordinate getCoordinateToPlace();
     public GridNode copy();
     public ArrayList<Pentomino> generateEdges();
+    public String toString();
 }
 
 /*******/
 
- private GridNode aSolution(GridNode firstNode, boolean reusablePentominoes){
+ private GridNode aSolution(GridNode firstNode){
     	/*Depth first search for a solution*/
 		GridNode node = firstNode;
 		Stack<GridNode> stack = new Stack<GridNode>();
 		HashSet<String> seen = new HashSet<>();
-
-
+		
 		stack.add(node);
-
+		
 		while (stack.size()>0){
 			node = stack.pop();
 
@@ -71,18 +71,20 @@ public class GridNode {
 			if (node.getCoordinateToPlace() == null){
 				return node;
 			}
+			
+			/*hash the board printout to avoid traversing explored nodes*/
+			if (seen.contains(node.toString())){
+				continue;
+			} else {
+				seen.add(node.toString());
+			}
 
 			for (Pentomino p : allPermutations){
 
 				if (p.canPlaceOn(node)){
-
 					GridNode newNode = node.copy();
 					p.placeOn(newNode);
-
-					if (!reusablePentominoes){
-						newNode.removePentominoType(p.getType());
-					}
-
+					newNode.removePentominoType(p.getType());
 					stack.push(newNode);
 				}
 			}
