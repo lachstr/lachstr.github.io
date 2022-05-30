@@ -36,7 +36,7 @@ However, it is worth noting just how quickly the computer finds a solution - on 
 This is Java code, with no attempt made to optimize for efficiency - so there is room for improvement.
 
 An important consideration is the simplicity of this algorithm - it is just a depth first search of a graph.
-In this context, the graph nodes are the board layouts and the graph vertices are the pendominos.
+In this context, the graph nodes are the board layouts and the graph vertices are the pentominoes.
 
 Those famillar with depth first search may find the following method in the `Solver` class satisfying;
 
@@ -99,4 +99,4 @@ Those wanting to view the full code for the Java solver may do so [here](https:/
 
 The Java program outputs character arrays to represent the pentomino board.
 
-To generate the colourful animations above I used a few python packages, those interested in seeing how I did that can do so [here](https://github.com/lachstr/pentominoAnimator/blob/main/notebook.ipynb).
+To generate the colourful animations above some python was used, those interested in the code can view so [here](https://github.com/lachstr/pentominoAnimator/blob/main/notebook.ipynb).
