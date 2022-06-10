@@ -20,13 +20,15 @@ class TaxCalculator:
     #rates are in local currency for the region, for 2021-2022
     # https://www.ato.gov.au/rates/individual-income-tax-rates/
     aus_rates = {0: 0, 18200:.19, 45000:.325, 120000:.37, 180000:.45}
-    # https://www.iras.gov.sg/taxes/individual-income-tax/basics-of-individual-income-tax/tax-residency-and-tax-rates/individual-income-tax-rates
-    sg_rates = {0: 0, 20000:.02, 30000:.035, 40000:.07, 80000:.115, 120000:.15, 160000:.18, 200000:.19, 240000:.195, 280000:.2, 320000:.22}
+    # https://www.iras.gov.sg/taxes/individual-income-tax
+    sg_rates = {0: 0, 20000:.02, 30000:.035, 40000:.07, 80000:.115,
+                120000:.15, 160000:.18, 200000:.19, 240000:.195, 280000:.2,
+                320000:.22}
     # https://www.gov.uk/income-tax-rates
     uk_rates = {0:0, 12570:.2, 50270:.4, 150000:.45}
     # https://taxsummaries.pwc.com/united-arab-emirates/individual/taxes-on-personal-income
     uae_rates = {0:0}
-    # https://www.citizensinformation.ie/en/money_and_tax/tax/income_tax/how_your_tax_is_calculated.html
+    # https://taxsummaries.pwc.com/ireland/individual/taxes-on-personal-income
     ire_rates = {0:.2, 36800:0.4}
     
     tax_rates_of = {"Australia":aus_rates,
@@ -49,9 +51,6 @@ class TaxCalculator:
             self.usd_rate = self.usd_exchange_rate_of[country]
         except KeyError:
             raise Exception("Country not supported!")
-        
-    def usd(self, income):
-        return income/self.usd_rate
     
     def tax_on_usd_vector(self, income: ndarray):
         return vectorize(self.tax_on_usd)(income)
@@ -85,7 +84,8 @@ rcParams['figure.dpi'] = 300
 
 usd_income = arange(0, 40000, 1000)
 
-for country in ["Australia", "Singapore", "United Kingdom", "Ireland", "United Arab Emirates"]:
+for country in ["Australia", "Singapore", "United Kingdom",
+                "Ireland", "United Arab Emirates"]:
     calculator = TaxCalculator(country)
     
     tax_usd = calculator.tax_on_usd_vector(usd_income)
