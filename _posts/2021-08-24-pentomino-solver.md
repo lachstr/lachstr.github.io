@@ -38,7 +38,7 @@ This is Java code, with no attempt made to optimize for efficiency - so there is
 An important consideration is the simplicity of this algorithm - it is just a depth first search of a graph.
 In this context, the graph nodes are the board layouts and the graph vertices are the pentominoes.
 
-Those famillar with depth first search may find the following method in the `Solver` class satisfying;
+The following `Solver` class completes a depth first search;
 
 ```java
 
