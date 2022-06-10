@@ -8,9 +8,7 @@ It can be difficult to compare how different countries tax their residents. Tax 
 
 The following plots show the estimated take home income (USD), per month for single residents assuming income is pro-rated over the year. This is not tax advice and no guarantee is made for its accuracy, your individual situation will likely differ - contact a local accountant for tax advice.
 
-![Low-Middle Income](https://raw.githubusercontent.com/lachstr/income-taxes-by-country-plot/main/low-middle-incomes.png)
-![High Income](https://raw.githubusercontent.com/lachstr/income-taxes-by-country-plot/main/middle-high-incomes.png)
-![Very High Income](https://raw.githubusercontent.com/lachstr/income-taxes-by-country-plot/main/very-high-incomes.png)
+Images here.
 
 ## Code
 
