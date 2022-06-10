@@ -53,7 +53,7 @@ class TaxCalculator:
     def usd(self, income):
         return income/self.usd_rate
     
-    def tax_on_usd_vector(self, income: numpy.ndarray):
+    def tax_on_usd_vector(self, income: ndarray):
         return vectorize(self.tax_on_usd)(income)
         
     def tax_on_usd(self, income: float):
