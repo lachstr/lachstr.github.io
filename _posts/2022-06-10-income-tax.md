@@ -98,4 +98,4 @@ plt.title("Monthly Net Income by Country")
 plt.legend()
 ```
 
-Those wanting to view the full source code may do so at [github.com/lachstr/income-taxes-by-country-plot](https://github.com/lachstr/income-taxes-by-country-plot). A Python3 installation with numpy and matplotlib should be sufficient.
+Those wanting to view the full source code may do so at [github.com/lachstr/income-taxes-by-country-plot](https://github.com/lachstr/income-taxes-by-country-plot). A Python 3 installation with numpy and matplotlib should be sufficient to reproduce the plots locally.
