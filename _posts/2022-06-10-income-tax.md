@@ -83,14 +83,14 @@ from numpy import arange
 from matplotlib import pyplot as plt, rcParams
 rcParams['figure.dpi'] = 300
 
-usd_income = arange(100000, 300000, 1000)
+usd_income = arange(0, 40000, 1000)
 
 for country in ["Australia", "Singapore", "United Kingdom", "Ireland", "United Arab Emirates"]:
     calculator = TaxCalculator(country)
     
-    usd_income_after_tax = calculator.tax_on_usd_vector(usd_income)
+    tax_usd = calculator.tax_on_usd_vector(usd_income)
         
-    plt.plot(usd_income/12, (usd_income-usd_income_after_tax)/12, label=country)
+    plt.plot(usd_income/12, (usd_income-tax_usd)/12, label=country)
 
 plt.xlabel("Monthly Gross Income (USD)")
 plt.ylabel("Monthly Net Income (USD)")
