@@ -3,11 +3,13 @@ layout: post
 title: "Income Taxes by Country"
 categories: cs
 ---
-It can be difficult to compare how different countries tax their residents. Tax laws are some of the most complex regulations in the world. In this post, we will seek to clearly compare the income tax liability for earners in different countries. Note that this does not account for the different corporate income taxes, import tariffs, consumption taxes or any additional taxes a government may levy.
+It can be difficult to compare how different countries tax their residents. Tax laws are some of the most complex regulations in the world. In this post, we will seek to compare the income tax liability for earners in different countries. Note that this does not account for the different corporate income taxes, import tariffs, consumption taxes or any additional taxes a government may levy.
 
-The following plots show the estimated take home income (USD), per month for single residents assuming income is pro-rated over the year. This is not tax advice and no guarantee is made for its accuracy, your individual situation will likely differ - contact a local accountant for tax advice.
+The following plots show the estimated take home income (USD), per month for single residents assuming income is pro-rated over the year. This is not tax advice and no guarantee is made for its accuracy, individual situations will likely differ - contact a local accountant for tax advice.
 
-Images here.
+![low](https://raw.githubusercontent.com/lachstr/income-taxes-by-country-plot/main/low-middle-incomes.png)
+![mid](https://raw.githubusercontent.com/lachstr/income-taxes-by-country-plot/main/middle-high-incomes.png)
+![high](https://raw.githubusercontent.com/lachstr/income-taxes-by-country-plot/main/very-high-incomes.png)
 
 ## Code
 
