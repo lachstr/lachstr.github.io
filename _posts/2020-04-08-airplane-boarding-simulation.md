@@ -10,7 +10,7 @@ Let's consider the following scenario;
 
 There are 100 passengers about to board a plane. 
 
-The first passenger to board sits in someone else's seat
+The first passenger to board sits in someone else's seat, maliciously - **not a random seat**.
 
 Each following passenger;
 
