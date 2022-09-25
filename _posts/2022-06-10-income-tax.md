@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Income Taxes by Country"
-categories: cs
+categories: stats
 ---
 It can be difficult to compare how different countries tax their residents. Tax laws are some of the most complex regulations in the world. In this post, we will seek to compare the income tax liability for earners in different countries. Note that this does not account for the full tax burden residents may bear from corporate income taxes, import tariffs, consumption taxes and other additional taxes a government may levy.
 
