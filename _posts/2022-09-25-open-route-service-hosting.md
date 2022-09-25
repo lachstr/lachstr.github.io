@@ -42,13 +42,14 @@ Initialy we used the Python `requests` library for our client. We were able to i
 
 This made me wonder what was bottlenecking the performance. I suspected it was the series nature of the requests. Using the `requests` library, we were waiting for the first request to be served successfully before sending the second request and so on. This meant 99% of the instance's processing power was never being utlisied!
 
-If instead, we could send the requests in paralell (without waiting for their responses before sending the subsequent ones) how much better could we do?
+If instead, we could send the requests in parallel (without waiting for their responses before sending the subsequent ones) how much better could we do?
 
 Fortunately, this problem has been addressed before and we found the [`grequests` library]() would do the trick. By paralellising the requests we were able to process at 30,000 requests per minute. This means our entire dataset could be processed in just over 3 minutes!
 
 The following video shows a batch of our requests being processed.
 
-<video width="680" height="382" controls>	  <source src="{{ site.baseurl }}/assets/paralell-req.mp4" type="video/mp4">
-</video> 
+<video width="680" height="382" controls>
+	<source src="{{ site.baseurl }}/assets/parallel-req.mp4" type="video/mp4">
+</video>
 
 This is one of the reasons I love computing, in many engineering fields performance improvments of fractions of a percent are noteworthy (mechanical, electrical etc) - in computing performance improvements of 21,000x are possible!
