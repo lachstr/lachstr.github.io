@@ -44,7 +44,7 @@ This made me wonder what was bottlenecking the performance. I suspected it was t
 
 If instead, we could send the requests in parallel (without waiting for their responses before sending the subsequent ones) how much better could we do?
 
-Fortunately, this problem has been addressed before and we found the [`grequests` library]() would do the trick. By paralellising the requests we were able to process at 30,000 requests per minute. This means our entire dataset could be processed in just over 3 minutes!
+Fortunately, this problem has been addressed before and we found the [`grequests` library](https://github.com/spyoungtech/grequests) would do the trick. By paralellising the requests we were able to process at 30,000 requests per minute. This means our entire dataset could be processed in just over 3 minutes!
 
 The following video shows a batch of our requests being processed.
 
