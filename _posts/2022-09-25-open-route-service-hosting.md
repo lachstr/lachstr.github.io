@@ -40,7 +40,7 @@ We ended up using the following instance:
 
 Initially we used the Python `requests` library for our client. We were able to increase our throughput from 1.4 per minute to 500 per minute, that meant we could process the entire dataset in just... 3.5 hours! That's a sure improvement over 50 days. However, it was noted that CPU utilisation on the server never surpassed a few percent.
 
-This made me wonder what was bottlenecking the performance. I suspected it was the sequential nature of the requests. Using the `requests` library, we were waiting for the first request to be served successfully before sending the second request and so on. This meant 99% of the instance's processing power was never being utilised!
+This made us wonder what was bottlenecking the performance. We suspected it was the sequential nature of the requests. Using the `requests` library, we were waiting for the first request to be served successfully before sending the second request and so on. This meant 99% of the instance's processing power was never being utilised!
 
 If instead, we could send the requests in parallel (without waiting for their responses before sending the subsequent ones) how much better could we do?
 
@@ -52,4 +52,3 @@ The following video shows a batch of our requests being processed.
     <source src="{{ site.baseurl }}/assets/parallel-reqs.mp4" type="video/mp4">
 </video>
 
-This is one of the reasons I love computing, in many engineering fields performance improvements of fractions of a percent are noteworthy (mechanical, electrical etc) - in computing performance improvements of 21,000x are possible!
