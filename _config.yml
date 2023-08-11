@@ -1,6 +1,6 @@
 title: lmac blog
 author: Lachlan Macartney
-email: lachymacartney@gmail.com
+email: lachlan.macartney.student@gmail.com
 description: > # this means to ignore newlines until "show_exerpts:"
         A blog collection of animations and graphs which I have created as part of my
         study of physical systems and mathematics. I hope that by sharing this content
@@ -27,6 +27,7 @@ plainwhite:
   # generate social links in footer
   social_links:
     github:  lachstr
+    email: lachlan.macartney.student@gmail.com
     linkedIn: in/lmacartney
     #dribbble: jekyll
     #flickr:   jekyll
@@ -37,7 +38,6 @@ plainwhite:
     #soundcloud: jekyll
     #telegram: jekyll
     #gitlab: jekyll
-    #email: jekyll
     # Mastodon instances
     # mastodon:
     # - username: jekyll
